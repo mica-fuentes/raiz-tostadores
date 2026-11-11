@@ -73,7 +73,10 @@ async function accion(page, paso, k) {
     if (z) {
       await z.scrollIntoViewIfNeeded();
       const bb = await z.boundingBox();
-      if (bb) await page.mouse.move(bb.x + bb.width * 0.3, bb.y + bb.height * 0.4);
+      if (bb) {
+        page.cursor = [bb.x + bb.width * 0.3, bb.y + bb.height * 0.4];
+        await page.mouse.move(...page.cursor);
+      }
       return 'cursor sobre zona ' + (k % zonas.length);
     }
   }
@@ -85,6 +88,14 @@ async function accion(page, paso, k) {
     el.click();
     return (el.className || el.tagName) + ' «' + (el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 30) + '»';
   }, i);
+  // Si el clic cambió el layout bajo el cursor quieto, Chromium dispara pointerleave/enter
+  // recién con el próximo evento de mouse y en un momento variable. Se re-envía la posición
+  // (1 px y de vuelta) para que el estado del lente quede igual en los dos lados.
+  if (page.cursor) {
+    await page.waitForTimeout(100);
+    await page.mouse.move(page.cursor[0] + 1, page.cursor[1]);
+    await page.mouse.move(...page.cursor);
+  }
   return 'clic botón ' + i + ' ' + desc;
 }
 

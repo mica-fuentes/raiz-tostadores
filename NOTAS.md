@@ -26,3 +26,5 @@ Cosas que se vieron al pasar el diseño a código y que **no se cambiaron**, por
 
 - En Cuenta, la propia referencia a veces mide 2 px menos de alto entre una corrida y otra (3238 / 3240 px a 1440). Es variación del render de Claude Design, no del sitio; si `comparar.js` llegara a marcarla, conviene volver a correrlo.
 - Los toasts son `position: fixed`; en capturas de página completa su lugar depende del scroll, por eso `interacciones.js` captura siempre desde arriba.
+- Cuando un clic cambia el alto del contenido bajo el cursor quieto, Chromium dispara `pointerleave` en un momento variable (le pasa igual a la referencia). `interacciones.js` vuelve a mover el cursor después de cada clic para que los dos lados queden en el mismo estado.
+- Con la máquina muy cargada (varias pruebas a la vez) aparecen diferencias de antialiasing en bordes rotados y en el borde difuso del lente. La referencia comparada contra sí misma (`comparar.js --autotest`) muestra las mismas diferencias, así que no son del sitio; corriendo de a una prueba por vez dan 0.
