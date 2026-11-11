@@ -1,0 +1,11 @@
+node_modules/
+dist/
+herramientas/node_modules/
+herramientas/salida/
+
+# Capturas de referencia: pesan ~14 MB y se regeneran con `node herramientas/render-referencia.js`
+referencia/capturas/
+# Runtime y documentación de Claude Design: código de terceros, se usa solo localmente para verificar
+referencia/runtime/
+# Brief interno del proyecto
+referencia/contexto/
