@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Raíz Tostadores · El Mirador</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/31e6d7518f91b8ea76818bbae4874d15">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&amp;display=swap">
+<style>
+body{margin:0}
+.cartn.bump2{animation:bump2 .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump2{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+.prod{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;padding-top:32px;padding-bottom:120px;align-items:start}
+.pmedia{position:relative;overflow:hidden;border-radius:28px;min-height:760px;display:flex;align-items:center;justify-content:center;background-color:#A0583E;color:#FBF8F3;touch-action:pan-y}
+.pbag{position:relative;z-index:1;width:300px}
+.pbag .sticker{right:-40px;top:14%}
+.pnum{position:absolute;left:28px;top:24px;z-index:1;font-size:16px;font-weight:600}
+.pinfo{display:flex;flex-direction:column;gap:22px;padding-top:24px}
+.crumbs{font-size:14px;color:#6E5A4E;margin:0}
+.crumbs a{text-decoration:none;color:#6E5A4E}
+.crumbs a:hover{text-decoration:underline}
+.pmeta{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6E5A4E;margin:-6px 0 0}
+.pnotes{font-style:italic;font-weight:400;font-size:28px;line-height:1.3;margin:0}
+.meters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.meters .meter{grid-template-columns:minmax(0,1fr);gap:8px}
+.modes{display:flex;flex-direction:column;gap:10px}
+.save-tag{display:inline-block;background:#A95F44;color:#FBF8F3;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:700;margin-left:8px;vertical-align:2px}
+.buyrow{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
+.stepper{display:flex;align-items:center;border:1.5px solid #C8B49A;border-radius:999px;min-height:56px}
+.stepper button{width:48px;height:52px;border:0;background:none;font:600 20px 'DM Sans',sans-serif;color:#3A2A21;cursor:pointer}
+.stepper span{min-width:28px;text-align:center;font-weight:600}
+.buyrow .pill{flex:1 1 260px;width:auto}
+.fine{font-size:14px;color:#6E5A4E;margin:0;line-height:1.5}
+.origen{background:#F2EBE1}
+.origen-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;margin:40px 0 0;padding:0}
+.facts div{border-top:1px solid #C8B49A;padding-top:12px}
+.facts dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E5A4E}
+.facts dd{margin:6px 0 0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px}
+.alt-svg{width:100%;height:auto;display:block}
+.alt-cap{font-size:14px;color:#6E5A4E;margin:12px 0 0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:36px 0 40px}
+.recipe{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start;animation:fadeup .5s cubic-bezier(.2,.7,.2,1)}
+.recipe.b{animation-name:fadeup2}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fadeup2{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:#E3D8CA;border-radius:22px;overflow:hidden}
+.num{background:#FBF8F3;padding:28px 24px;display:flex;flex-direction:column;gap:6px}
+.num b{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:48px;line-height:1;font-variation-settings:"SOFT" 100,"WONK" 1}
+.num span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E5A4E}
+.rsteps{list-style:none;counter-reset:st;padding:0;margin:0;display:flex;flex-direction:column;gap:18px}
+.rsteps li{counter-increment:st;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;font-size:17px;line-height:1.5}
+.rsteps li::before{content:counter(st);font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:28px;line-height:1;color:#A95F44}
+.related{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.rel{display:flex;gap:20px;align-items:center;text-decoration:none;background:#F2EBE1;border-radius:22px;padding:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background-color .3s}
+.rel:hover{transform:translateY(-4px);background:#EADFD0}
+.rel .bag{width:84px;flex:0 0 84px;transform:rotate(-3deg)}
+.rel b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:24px}
+.rel span{display:block;font-size:14px;color:#6E5A4E;margin-top:4px}
+@container raiz (max-width:760px){
+.prod{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:16px;padding-bottom:80px}
+.pmedia{min-height:500px;border-radius:22px}
+.pbag{width:210px}
+.pbag .sticker{right:-26px;width:80px;height:80px;font-size:10px}
+.pinfo{padding-top:0;gap:18px}
+.pnotes{font-size:22px}
+.meters{gap:12px}
+.origen-in,.recipe{grid-template-columns:minmax(0,1fr);gap:36px}
+.facts{gap:18px 20px}
+.nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+.num{padding:20px 18px}
+.num b{font-size:36px}
+.related{grid-template-columns:minmax(0,1fr);gap:12px}
+}
+.recipe-wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.v60-ph{aspect-ratio:3/4}
+.recipe-wrap .recipe{grid-template-columns:minmax(0,1fr);gap:36px}
+@container raiz (max-width:760px){.recipe-wrap{grid-template-columns:minmax(0,1fr);gap:36px}.v60-ph{aspect-ratio:4/3}}
+</style>
+</helmet>
+<div class="raiz">
+
+<header class="hdr static">
+<div class="wrap hdr-in">
+<a href="Main.dc.html" class="logo-link" aria-label="Raíz Tostadores, inicio"><span class="logo"></span></a>
+<nav class="nav" aria-label="Principal"><a href="Tienda.dc.html" class="on">Tienda</a><a href="Suscripcion.dc.html">Suscripción</a><a href="Main.dc.html">Encontrá tu café</a><a href="Main.dc.html">Cómo tostamos</a></nav>
+<div class="hdr-r"><a href="Cuenta.dc.html" class="tlink hide-s">Mi cuenta</a><a href="#carrito" class="tlink">Carrito<span class="{{cartCls}}">{{cart}}</span></a><a href="Suscripcion.dc.html" class="pill solid cta-s">Suscribirme</a><details class="mmenu"><summary class="pill" aria-label="Abrir menú">Menú</summary><nav class="mmenu-panel" aria-label="Menú"><a href="Tienda.dc.html">Tienda</a><a href="Suscripcion.dc.html">Suscripción</a><a href="Main.dc.html">Encontrá tu café</a><a href="Cuenta.dc.html">Mi cuenta</a><a href="#carrito">Carrito</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap prod">
+<div class="{{mediaCls}}" style="--lx: {{lx}}; --ly: {{ly}}" onPointerMove="{{move}}" onPointerLeave="{{leave}}">
+<div class="lens tr-el-mirador" aria-hidden="true"></div>
+<span class="pnum serif">N.º 01</span>
+<div class="pbag">
+<div class="bag tr-el-mirador bob" role="img" aria-label="Bolsa de El Mirador, {{sizeLabel}}"><div class="blabel" aria-hidden="true"><span class="logo"></span><hr><span class="bname">El Mirador</span><span class="bdata">Huila · 1700 m</span></div></div>
+<div class="sticker" aria-hidden="true">Tostado<br>lun 5/10</div>
+</div>
+</div>
+<div class="pinfo">
+<p class="crumbs"><a href="Tienda.dc.html">Tienda</a> / Colombia</p>
+<h1 class="h1 serif">El Mirador</h1>
+<p class="pmeta">Huila, Colombia · 1700 m · Lavado · Tueste medio</p>
+<p class="pnotes serif">Chocolate con leche, caramelo y manzana roja. Dulce y limpio.</p>
+<div class="meters">
+<div class="meter"><span>Dulzor</span><div class="meter-bar" role="img" aria-label="Dulzor: 4 de 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+<div class="meter"><span>Acidez</span><div class="meter-bar" role="img" aria-label="Acidez: 3 de 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+<div class="meter"><span>Cuerpo</span><div class="meter-bar" role="img" aria-label="Cuerpo: 3 de 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+</div>
+<div><p class="lbl">Peso</p><div class="seg"><sc-for list="{{sizes}}" as="z" hint-placeholder-count="2"><button class="{{z.cls}}" type="button" aria-pressed="{{z.on}}" onClick="{{z.pick}}">{{z.label}}</button></sc-for></div></div>
+<div><p class="lbl">Molienda</p><div class="seg"><sc-for list="{{grinds}}" as="g" hint-placeholder-count="4"><button class="{{g.cls}}" type="button" aria-pressed="{{g.on}}" onClick="{{g.pick}}">{{g.label}}</button></sc-for></div></div>
+<div class="modes" role="radiogroup" aria-label="Cómo lo querés">
+<button class="{{subCls}}" type="button" role="radio" aria-checked="{{isSub}}" onClick="{{pickSub}}"><span class="radio"></span><span class="opt-t"><b>Suscripción<span class="save-tag">−10%</span></b><span>Cada 2 o 4 semanas, sin permanencia</span></span><span class="opt-p">{{subPrice}}</span></button>
+<button class="{{onceCls}}" type="button" role="radio" aria-checked="{{isOnce}}" onClick="{{pickOnce}}"><span class="radio"></span><span class="opt-t"><b>Compra única</b><span>Llega 48 h después del tueste</span></span><span class="opt-p">{{oncePrice}}</span></button>
+</div>
+<sc-if value="{{isSub}}" hint-placeholder-val="{{true}}">
+<div><p class="lbl">Frecuencia</p><div class="seg"><sc-for list="{{freqs}}" as="f" hint-placeholder-count="2"><button class="{{f.cls}}" type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}">{{f.label}}</button></sc-for></div></div>
+<a href="Suscripcion.dc.html" class="pill solid big">{{subCta}}</a>
+</sc-if>
+<sc-if value="{{isOnce}}" hint-placeholder-val="{{false}}">
+<div class="buyrow">
+<div class="stepper"><button type="button" aria-label="Restar una bolsa" onClick="{{minus}}">−</button><span aria-live="polite">{{qty}}</span><button type="button" aria-label="Sumar una bolsa" onClick="{{plus}}">+</button></div>
+<button class="pill solid big" type="button" onClick="{{addCart}}">{{onceCta}}</button>
+</div>
+</sc-if>
+<p class="fine">Envío gratis en moto en CABA. Sale de la tanda del lunes 5/10.</p>
+</div>
+</section>
+
+<section class="sec origen">
+<div class="wrap"><figure class="ph finca-ph"><img src="/_blob/0afe95ee42e6bea05bd95bddf2d80672" alt="Cafetales en las laderas de Huila con cerezas maduras en primer plano"><figcaption>Huila, Colombia</figcaption></figure></div>
+<div class="wrap origen-in">
+<div>
+<p class="eyebrow muted">De dónde viene</p>
+<h2 class="h2 serif">Una finca
+a 1700 metros.</h2>
+<dl class="facts">
+<div><dt>Productor</dt><dd>[Nombre del productor]</dd></div>
+<div><dt>Región</dt><dd>Huila, Colombia</dd></div>
+<div><dt>Variedades</dt><dd>Caturra y Castillo</dd></div>
+<div><dt>Proceso</dt><dd>Lavado</dd></div>
+<div><dt>Cosecha</dt><dd>[Meses de cosecha]</dd></div>
+<div><dt>Tueste</dt><dd>Medio · lunes 5/10</dd></div>
+</dl>
+</div>
+<figure style="margin: 0">
+<svg class="alt-svg" viewBox="0 0 640 380" role="img" aria-label="Altura de los cinco orígenes: Caparaó 1200 m, Santa Cruz 1500 m, San Ignacio 1600 m, El Mirador 1700 m y Buku 2000 m.">
+<path d="M0 380 C70 350 120 280 190 210 C250 150 280 80 330 50 C380 80 420 150 480 210 C540 270 590 320 640 336 L640 380 Z" fill="#E3D4C1"></path>
+<g font-family="DM Sans, sans-serif" font-size="13" font-weight="600">
+<line x1="0" y1="290" x2="640" y2="290" stroke="#C8B49A" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<text x="0" y="282" fill="#6E5A4E">Caparaó · 1200 m</text>
+<line x1="0" y1="215" x2="640" y2="215" stroke="#C8B49A" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<text x="0" y="207" fill="#6E5A4E">Santa Cruz · 1500 m</text>
+<line x1="0" y1="190" x2="640" y2="190" stroke="#C8B49A" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<text x="0" y="182" fill="#6E5A4E">San Ignacio · 1600 m</text>
+<line x1="0" y1="165" x2="640" y2="165" stroke="#A95F44" stroke-width="2.5"></line>
+<circle cx="452" cy="165" r="9" fill="#A95F44"></circle>
+<circle cx="452" cy="165" r="18" fill="none" stroke="#A95F44" stroke-width="1.5" opacity=".5"></circle>
+<text x="476" y="157" fill="#8E4A33" font-size="15" font-weight="700">El Mirador · 1700 m</text>
+<line x1="0" y1="90" x2="640" y2="90" stroke="#C8B49A" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<text x="0" y="82" fill="#6E5A4E">Buku · 2000 m</text>
+</g>
+</svg>
+<figcaption class="alt-cap">A más altura, el grano madura más lento y concentra más azúcares.</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap recipe-wrap">
+<figure class="ph v60-ph"><img src="/_blob/2d61934d0da8367a4ff4095440a36d6a" alt="Agua cayendo sobre el café en un V60 de cerámica"></figure>
+<div>
+<p class="eyebrow muted">Cómo prepararlo</p>
+<h2 class="h2 serif">Tu receta de partida.</h2>
+<div class="tabs" role="tablist" aria-label="Método"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="4"><button class="{{t.cls}}" type="button" role="tab" aria-selected="{{t.on}}" onClick="{{t.pick}}">{{t.label}}</button></sc-for></div>
+<div class="{{recipeCls}}">
+<div class="nums">
+<sc-for list="{{rNums}}" as="n" hint-placeholder-count="6"><div class="num"><b>{{n.v}}</b><span>{{n.k}}</span></div></sc-for>
+</div>
+<div>
+<ol class="rsteps"><sc-for list="{{rSteps}}" as="st" hint-placeholder-count="4"><li>{{st}}</li></sc-for></ol>
+<p class="fine" style="margin-top: 24px">Receta de referencia: a validar con el tostador.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 120px">
+<p class="eyebrow muted">También te puede gustar</p>
+<div class="related">
+<a href="Tienda.dc.html" class="rel"><div class="bag tr-buku" role="img" aria-label="Bolsa de Buku"></div><div><b>Buku</b><span>Frutilla, jazmín y arándanos</span></div></a>
+<a href="Tienda.dc.html" class="rel"><div class="bag tr-santa-cruz" role="img" aria-label="Bolsa de Santa Cruz"></div><div><b>Santa Cruz</b><span>Cacao, frutos rojos y vino</span></div></a>
+<a href="Tienda.dc.html" class="rel"><div class="bag tr-san-ignacio" role="img" aria-label="Bolsa de San Ignacio"></div><div><b>San Ignacio</b><span>Nuez, miel y notas florales</span></div></a>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap foot-top">
+<div>
+<h2 class="h2 serif">Avisame cuando
+salga la tanda.</h2>
+<form class="news" onSubmit="{{noSubmit}}"><label class="sr" for="mail-f">Tu mail</label><input id="mail-f" type="email" placeholder="tu@mail.com"><button class="pill light" type="submit">Avisame</button></form>
+</div>
+<div class="fcols">
+<div><p class="fh">Tienda</p><a href="Tienda.dc.html">Cafés</a><a href="Suscripcion.dc.html">Suscripción</a><a href="Main.dc.html">Encontrá tu café</a></div>
+<div><p class="fh">Ayuda</p><a href="#envios">Envíos</a><a href="#moliendas">Moliendas</a><a href="#contacto">Contacto</a></div>
+<div><p class="fh">Raíz</p><a href="Main.dc.html">Cómo tostamos</a><a href="#instagram">Instagram</a><a href="Cuenta.dc.html">Mi cuenta</a></div>
+</div>
+</div>
+<div class="giant" aria-hidden="true"><span class="logo"></span></div>
+</footer>
+
+<div class="{{toastCls}}" role="status"><span class="leaf"></span>{{toastTxt}}</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4400}}'>
+const RECIPES = [
+  { label: 'V60', nums: [['15 g', 'Café'], ['250 ml', 'Agua'], ['93 °C', 'Temperatura'], ['3:00', 'Minutos'], ['Media', 'Molienda'], ['1:16', 'Proporción']], steps: ['Enjuagá el filtro con agua caliente y descartá esa agua.', 'Volcá el café, sumá 40 ml de agua y esperá 30 segundos.', 'Agregá el resto en espiral, en tres tandas.', 'Cuando termina de caer, a la taza.'] },
+  { label: 'Espresso', nums: [['18 g', 'Café'], ['36 g', 'En taza'], ['93 °C', 'Temperatura'], ['0:28', 'Segundos'], ['Fina', 'Molienda'], ['1:2', 'Proporción']], steps: ['Distribuí el café y compactá parejo.', 'Extraé 36 g de bebida en 26 a 30 segundos.', 'Si sale ácido, molé más fino; si sale amargo, más grueso.'] },
+  { label: 'Prensa francesa', nums: [['30 g', 'Café'], ['500 ml', 'Agua'], ['94 °C', 'Temperatura'], ['4:00', 'Minutos'], ['Gruesa', 'Molienda'], ['1:16', 'Proporción']], steps: ['Volcá el café y toda el agua.', 'A los 4 minutos, rompé la costra con una cuchara.', 'Bajá el émbolo despacio y serví enseguida.'] },
+  { label: 'Moka', nums: [['20 g', 'Café'], ['200 ml', 'Agua'], ['Caliente', 'Agua de base'], ['5:00', 'Minutos'], ['Fina', 'Molienda'], ['1:10', 'Proporción']], steps: ['Llená la base con agua caliente hasta la válvula.', 'Poné el café en el filtro sin compactar.', 'Fuego medio; retirá cuando empieza a burbujear.'] }
+];
+const GRINDS = ['Grano', 'Espresso', 'Filtro', 'Prensa'];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { size: 0, grind: 2, mode: 'sub', qty: 1, freq: 4, tab: 0, tracking: false, lx: 50, ly: 50, cart: 0, bump: 0, toastOn: false, toast: '' };
+  }
+  componentWillUnmount() { clearTimeout(this.tt); }
+  renderVals() {
+    const s = this.state;
+    const fmt = (n) => '$' + n.toLocaleString('es-AR');
+    const once = s.size ? 45000 : 12500;
+    const sub = s.size ? 40500 : 11250;
+    const sz = s.size ? '1 kg' : '250 g';
+    const r = RECIPES[s.tab];
+    return {
+      cart: s.cart,
+      cartCls: 'cartn' + (s.bump ? (s.bump % 2 ? ' bump' : ' bump2') : ''),
+      mediaCls: 'pmedia wander' + (s.tracking ? ' tracking' : ''),
+      lx: s.lx + '%',
+      ly: s.ly + '%',
+      move: (e) => { const b = e.currentTarget.getBoundingClientRect(); this.setState({ tracking: true, lx: Math.round(((e.clientX - b.left) / b.width) * 100), ly: Math.round(((e.clientY - b.top) / b.height) * 100) }); },
+      leave: () => this.setState({ tracking: false }),
+      sizeLabel: sz,
+      sizes: ['250 g', '1 kg'].map((z, k) => ({ label: z, on: s.size === k, cls: 'chip' + (s.size === k ? ' on' : ''), pick: () => this.setState({ size: k }) })),
+      grinds: GRINDS.map((g, k) => ({ label: g, on: s.grind === k, cls: 'chip' + (s.grind === k ? ' on' : ''), pick: () => this.setState({ grind: k }) })),
+      isSub: s.mode === 'sub',
+      isOnce: s.mode === 'once',
+      subCls: 'opt' + (s.mode === 'sub' ? ' on' : ''),
+      onceCls: 'opt' + (s.mode === 'once' ? ' on' : ''),
+      pickSub: () => this.setState({ mode: 'sub' }),
+      pickOnce: () => this.setState({ mode: 'once' }),
+      subPrice: fmt(sub),
+      oncePrice: fmt(once),
+      freqs: [2, 4].map((f) => ({ label: 'Cada ' + f + ' semanas', on: s.freq === f, cls: 'chip' + (s.freq === f ? ' on' : ''), pick: () => this.setState({ freq: f }) })),
+      subCta: 'Suscribirme · ' + fmt(sub) + ' cada ' + s.freq + ' semanas',
+      qty: s.qty,
+      minus: () => this.setState((st) => ({ qty: Math.max(1, st.qty - 1) })),
+      plus: () => this.setState((st) => ({ qty: Math.min(9, st.qty + 1) })),
+      onceCta: 'Agregar al carrito · ' + fmt(once * s.qty),
+      addCart: () => {
+        clearTimeout(this.tt);
+        this.setState((st) => ({ cart: st.cart + st.qty, bump: st.bump + 1, toastOn: true, toast: 'Agregaste ' + st.qty + ' × El Mirador ' + sz + ' · ' + GRINDS[st.grind].toLowerCase() }));
+        this.tt = setTimeout(() => this.setState({ toastOn: false }), 2600);
+      },
+      tabs: RECIPES.map((x, k) => ({ label: x.label, on: s.tab === k, cls: 'chip' + (s.tab === k ? ' on' : ''), pick: () => this.setState({ tab: k }) })),
+      recipeCls: 'recipe' + (s.tab % 2 ? ' b' : ''),
+      rNums: r.nums.map((n) => ({ v: n[0], k: n[1] })),
+      rSteps: r.steps,
+      toastCls: 'toast' + (s.toastOn ? ' on' : ''),
+      toastTxt: s.toast,
+      noSubmit: (e) => e.preventDefault()
+    };
+  }
+}
+</script>
+</body>
+</html>

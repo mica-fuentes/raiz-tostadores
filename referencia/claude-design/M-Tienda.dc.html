@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Raíz Tostadores · Tienda · mobile</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/31e6d7518f91b8ea76818bbae4874d15">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&amp;display=swap">
+<style>
+body{margin:0}
+.cartn.bump2{animation:bump2 .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump2{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+.top{padding:80px 0 56px}
+.top-in{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px;align-items:end}
+.top .lead{margin-top:24px;font-weight:500;color:#3A2A21}
+.filters{display:flex;flex-direction:column;gap:20px}
+.count{font-size:15px;color:#6E5A4E;margin:0}
+.shelves{display:flex;flex-direction:column;gap:28px;padding-bottom:112px}
+.shelf{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border-radius:28px;overflow:hidden;background:#F2EBE1;transition:opacity .5s,transform .6s cubic-bezier(.2,.7,.2,1),filter .5s}
+.shelf.rev .shelf-media{order:2}
+.shelf.dim{opacity:.3;transform:scale(.975);filter:saturate(.25)}
+.shelf-media{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:460px;touch-action:pan-y}
+.shelf-bag{position:relative;z-index:1;width:210px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.shelf:hover .shelf-bag{transform:translateY(-12px) rotate(-3deg) scale(1.03)}
+.shelf-bag .bag{transform:rotate(-3deg)}
+.shelf-num{position:absolute;left:28px;top:24px;z-index:1;font-size:16px;font-weight:600;letter-spacing:.02em}
+.shelf-info{padding:52px 56px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+.shelf-info .eyebrow{margin:0}
+.big3{font-size:clamp(44px,4.6cqi,68px);line-height:1;font-variation-settings:"SOFT" 100,"WONK" 1}
+.nlink{text-decoration:none}
+.nlink:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+.shelf-notes{font-style:italic;font-weight:400;font-size:26px;line-height:1.3;margin:0;max-width:24em}
+.meters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:4px}
+.meters .meter{grid-template-columns:minmax(0,1fr);gap:8px}
+.stags{display:flex;flex-wrap:wrap;gap:8px}
+.stag{font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;background:#FBF8F3;border:1px solid #E3D8CA}
+.shelf-buy{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:8px;padding-top:22px;border-top:1px solid #E3D8CA}
+.shelf-price{font-weight:600;font-size:22px;margin-left:auto;min-width:96px;text-align:right}
+.quizband{background:#3A2A21;color:#FBF8F3;border-radius:28px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);overflow:hidden;margin-bottom:120px}
+.quizband-media{position:relative;min-height:300px;background-color:#E4C7B9}
+.quizband-media .lens{-webkit-mask-image:none;mask-image:none}
+.quizband-txt{padding:56px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+@container raiz (max-width:760px){
+.top{padding:48px 0 36px}
+.top-in{grid-template-columns:minmax(0,1fr);gap:32px}
+.shelf{grid-template-columns:minmax(0,1fr);border-radius:22px}
+.shelf.rev .shelf-media{order:0}
+.shelf-media{min-height:360px}
+.shelf-bag{width:170px}
+.shelf-info{padding:28px 22px 26px;gap:14px}
+.shelf-notes{font-size:21px}
+.meters{gap:12px}
+.shelf-price{margin-left:0;text-align:left;width:100%}
+.quizband{grid-template-columns:minmax(0,1fr);border-radius:22px;margin-bottom:80px}
+.quizband-media{min-height:180px}
+.quizband-txt{padding:28px 22px}
+}
+</style>
+</helmet>
+<div class="raiz">
+
+<header class="hdr static">
+<div class="wrap hdr-in">
+<a href="Mobile.dc.html" class="logo-link" aria-label="Raíz Tostadores, inicio"><span class="logo"></span></a>
+<nav class="nav" aria-label="Principal"><a href="M-Tienda.dc.html" class="on" aria-current="page">Tienda</a><a href="M-Suscripcion.dc.html">Suscripción</a><a href="Mobile.dc.html">Encontrá tu café</a><a href="Mobile.dc.html">Cómo tostamos</a></nav>
+<div class="hdr-r"><a href="M-Cuenta.dc.html" class="tlink hide-s">Mi cuenta</a><a href="#carrito" class="tlink">Carrito<span class="{{cartCls}}">{{cart}}</span></a><a href="M-Suscripcion.dc.html" class="pill solid cta-s">Suscribirme</a><details class="mmenu"><summary class="pill" aria-label="Abrir menú">Menú</summary><nav class="mmenu-panel" aria-label="Menú"><a href="M-Tienda.dc.html">Tienda</a><a href="M-Suscripcion.dc.html">Suscripción</a><a href="Mobile.dc.html">Encontrá tu café</a><a href="M-Cuenta.dc.html">Mi cuenta</a><a href="#carrito">Carrito</a></nav></details></div>
+</div>
+</header>
+
+<section class="top">
+<div class="wrap top-in">
+<div>
+<p class="eyebrow muted">Tienda · tanda del lunes 5/10</p>
+<h1 class="h1 serif">Cinco cafés,
+una tanda.</h1>
+<p class="lead">Tostamos el lunes lo que se pidió hasta el domingo. Cuando un origen se termina, vuelve en la próxima cosecha.</p>
+</div>
+<div class="filters">
+<div><p class="lbl">Lo preparás en</p><div class="seg"><sc-for list="{{fm}}" as="f" hint-placeholder-count="4"><button class="{{f.cls}}" type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}">{{f.label}}</button></sc-for></div></div>
+<div><p class="lbl">Te gusta lo</p><div class="seg"><sc-for list="{{fp}}" as="f" hint-placeholder-count="4"><button class="{{f.cls}}" type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}">{{f.label}}</button></sc-for></div></div>
+<p class="count" aria-live="polite">{{countTxt}}</p>
+</div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 56px"><figure class="ph tanda-ph"><img src="/_blob/676b680fc3ce8583a0de8a6d55a124fd" alt="Tostadora volcando la tanda del lunes en la bandeja de enfriado"><figcaption>Así sale la tanda de cada lunes</figcaption></figure></section>
+
+<section class="wrap shelves" aria-label="Cafés">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="5">
+<article class="{{r.cls}}">
+<div class="{{r.mediaCls}}" style="background-color: {{r.fondo}}; color: {{r.ink}}; --lx: {{r.lx}}; --ly: {{r.ly}}; animation-delay: {{r.delay}}" onPointerMove="{{r.move}}" onPointerLeave="{{r.leave}}">
+<div class="{{r.lensCls}}" aria-hidden="true"></div>
+<span class="shelf-num serif">N.º {{r.num}}</span>
+<div class="shelf-bag"><div class="{{r.bagCls}}" role="img" aria-label="{{r.aria}}"><div class="blabel" aria-hidden="true"><span class="logo"></span><hr><span class="bname">{{r.name}}</span><span class="bdata">{{r.data}}</span></div></div></div>
+</div>
+<div class="shelf-info">
+<p class="eyebrow muted">{{r.meta}}</p>
+<h2 class="h3 big3"><a href="M-Ficha.dc.html" class="nlink">{{r.name}}</a></h2>
+<p class="shelf-notes serif">{{r.notesTxt}}</p>
+<div class="meters">
+<sc-for list="{{r.meters}}" as="m" hint-placeholder-count="3"><div class="meter"><span>{{m.label}}</span><div class="meter-bar" role="img" aria-label="{{m.aria}}"><sc-for list="{{m.cells}}" as="c" hint-placeholder-count="5"><i class="{{c.cls}}"></i></sc-for></div></div></sc-for>
+</div>
+<div class="stags"><sc-for list="{{r.tags}}" as="t" hint-placeholder-count="3"><span class="stag">{{t}}</span></sc-for></div>
+<div class="shelf-buy">
+<div class="seg"><sc-for list="{{r.sizes}}" as="z" hint-placeholder-count="2"><button class="{{z.cls}}" type="button" aria-pressed="{{z.on}}" onClick="{{z.pick}}">{{z.label}}</button></sc-for></div>
+<span class="shelf-price">{{r.priceTxt}}</span>
+<button class="pill solid" type="button" onClick="{{r.add}}">Agregar</button>
+<a href="M-Ficha.dc.html" class="ulink">Ver ficha</a>
+</div>
+</div>
+</article>
+</sc-for>
+</section>
+
+<section class="wrap">
+<div class="quizband">
+<div class="quizband-media"><div class="lens tr-buku" aria-hidden="true"></div></div>
+<div class="quizband-txt">
+<p class="eyebrow" style="color: #D4A089; margin: 0">Quiz · 1 minuto</p>
+<h2 class="h2 serif">¿No sabés cuál elegir?</h2>
+<p class="lead">Cuatro preguntas y te recomendamos uno, con el porqué.</p>
+<div><a href="Mobile.dc.html" class="pill light">Hacer el quiz</a></div>
+</div>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap foot-top">
+<div>
+<h2 class="h2 serif">Avisame cuando
+salga la tanda.</h2>
+<form class="news" onSubmit="{{noSubmit}}"><label class="sr" for="mail-t">Tu mail</label><input id="mail-t" type="email" placeholder="tu@mail.com"><button class="pill light" type="submit">Avisame</button></form>
+</div>
+<div class="fcols">
+<div><p class="fh">Tienda</p><a href="M-Tienda.dc.html">Cafés</a><a href="M-Suscripcion.dc.html">Suscripción</a><a href="Mobile.dc.html">Encontrá tu café</a></div>
+<div><p class="fh">Ayuda</p><a href="#envios">Envíos</a><a href="#moliendas">Moliendas</a><a href="#contacto">Contacto</a></div>
+<div><p class="fh">Raíz</p><a href="Mobile.dc.html">Cómo tostamos</a><a href="#instagram">Instagram</a><a href="M-Cuenta.dc.html">Mi cuenta</a></div>
+</div>
+</div>
+<div class="giant" aria-hidden="true"><span class="logo"></span></div>
+</footer>
+
+<div class="{{toastCls}}" role="status"><span class="leaf"></span>{{toastTxt}}</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":6900}}'>
+const ORIG = [
+  { id: 'el-mirador', name: 'El Mirador', region: 'Huila', country: 'Colombia', alt: '1700 m', proc: 'Lavado', notes: 'Chocolate con leche, caramelo y manzana roja.', fondo: '#A0583E', ink: '#FBF8F3', price: 12500, metodo: ['Espresso', 'Filtro'], perfil: ['Chocolate y dulce'], m: [4, 3, 3] },
+  { id: 'caparao', name: 'Caparaó', region: 'Minas Gerais', country: 'Brasil', alt: '1200 m', proc: 'Natural', notes: 'Chocolate amargo, avellanas y cuerpo denso.', fondo: '#3A2A21', ink: '#FBF8F3', price: 12500, metodo: ['Espresso', 'Prensa'], perfil: ['Chocolate y dulce'], m: [3, 1, 5] },
+  { id: 'san-ignacio', name: 'San Ignacio', region: 'Cajamarca', country: 'Perú', alt: '1600 m', proc: 'Lavado', notes: 'Nuez, miel y notas florales.', fondo: '#686B4D', ink: '#FBF8F3', price: 12000, metodo: ['Filtro', 'Prensa'], perfil: ['Chocolate y dulce', 'Floral'], m: [4, 2, 3] },
+  { id: 'buku', name: 'Buku', region: 'Guji', country: 'Etiopía', alt: '2000 m', proc: 'Natural', notes: 'Frutilla, jazmín y arándanos.', fondo: '#E4C7B9', ink: '#3A2A21', price: 14000, metodo: ['Filtro'], perfil: ['Frutal', 'Floral'], m: [3, 5, 2] },
+  { id: 'santa-cruz', name: 'Santa Cruz', region: 'Chiapas', country: 'México', alt: '1500 m', proc: 'Maceración carbónica', notes: 'Cacao, frutos rojos y vino.', fondo: '#7C4450', ink: '#FBF8F3', price: 13500, metodo: ['Filtro'], perfil: ['Frutal'], m: [3, 4, 3] }
+];
+const FM = ['Todos', 'Espresso', 'Filtro', 'Prensa'];
+const FP = ['Todos', 'Chocolate y dulce', 'Frutal', 'Floral'];
+const ML = ['Dulzor', 'Acidez', 'Cuerpo'];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { cart: 0, bump: 0, toast: '', toastOn: false, fm: 'Todos', fp: 'Todos', sizes: [0, 0, 0, 0, 0], hi: -1, hx: 50, hy: 50 };
+  }
+  componentWillUnmount() { clearTimeout(this.tt); }
+  renderVals() {
+    const s = this.state;
+    const fmt = (n) => '$' + Math.round(n).toLocaleString('es-AR');
+    const ok = (o) => (s.fm === 'Todos' || o.metodo.includes(s.fm)) && (s.fp === 'Todos' || o.perfil.includes(s.fp));
+    const n = ORIG.filter(ok).length;
+    return {
+      cart: s.cart,
+      cartCls: 'cartn' + (s.bump ? (s.bump % 2 ? ' bump' : ' bump2') : ''),
+      fm: FM.map((x) => ({ label: x, on: s.fm === x, cls: 'chip' + (s.fm === x ? ' on' : ''), pick: () => this.setState({ fm: x }) })),
+      fp: FP.map((x) => ({ label: x, on: s.fp === x, cls: 'chip' + (s.fp === x ? ' on' : ''), pick: () => this.setState({ fp: x }) })),
+      countTxt: n === 5 ? 'Los 5 cafés de esta tanda.' : (n === 0 ? 'Ningún café coincide: probá con otra combinación.' : n + (n === 1 ? ' café coincide' : ' cafés coinciden') + ' con lo que buscás.'),
+      rows: ORIG.map((o, i) => {
+        const tr = s.hi === i;
+        const kg = s.sizes[i] === 1;
+        return {
+          cls: 'shelf' + (i % 2 ? ' rev' : '') + (ok(o) ? '' : ' dim'),
+          mediaCls: 'shelf-media wander' + (tr ? ' tracking' : ''),
+          lensCls: 'lens tr-' + o.id,
+          fondo: o.fondo,
+          ink: o.ink,
+          lx: (tr ? s.hx : 50) + '%',
+          ly: (tr ? s.hy : 50) + '%',
+          delay: (-i * 3.7) + 's',
+          move: (e) => { const b = e.currentTarget.getBoundingClientRect(); this.setState({ hi: i, hx: Math.round(((e.clientX - b.left) / b.width) * 100), hy: Math.round(((e.clientY - b.top) / b.height) * 100) }); },
+          leave: () => this.setState({ hi: -1 }),
+          num: '0' + (i + 1),
+          bagCls: 'bag tr-' + o.id,
+          aria: 'Bolsa de ' + o.name,
+          name: o.name,
+          data: o.region + ' · ' + o.alt,
+          meta: o.region + ', ' + o.country + ' · ' + o.alt + ' · ' + o.proc,
+          notesTxt: o.notes,
+          meters: o.m.map((v, k) => ({ label: ML[k], aria: ML[k] + ': ' + v + ' de 5', cells: [0, 1, 2, 3, 4].map((c) => ({ cls: c < v ? 'on' : '' })) })),
+          tags: o.metodo.map((x) => 'Para ' + x.toLowerCase()),
+          sizes: ['250 g', '1 kg'].map((z, k) => ({ label: z, on: s.sizes[i] === k, cls: 'chip' + (s.sizes[i] === k ? ' on' : ''), pick: () => this.setState((st) => { const a = st.sizes.slice(); a[i] = k; return { sizes: a }; }) })),
+          priceTxt: fmt(kg ? o.price * 3.6 : o.price),
+          add: () => {
+            clearTimeout(this.tt);
+            this.setState((st) => ({ cart: st.cart + 1, bump: st.bump + 1, toastOn: true, toast: 'Agregaste ' + o.name + ' · ' + (st.sizes[i] === 1 ? '1 kg' : '250 g') }));
+            this.tt = setTimeout(() => this.setState({ toastOn: false }), 2600);
+          }
+        };
+      }),
+      toastCls: 'toast' + (s.toastOn ? ' on' : ''),
+      toastTxt: s.toast,
+      noSubmit: (e) => e.preventDefault()
+    };
+  }
+}
+</script>
+</body>
+</html>

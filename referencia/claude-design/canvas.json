@@ -1,0 +1,136 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Cuenta.dc.html": {
+      "expand": "fill",
+      "h": 2700,
+      "is_interactive": true,
+      "title": "Desktop · Mi suscripción",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Ficha.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "Desktop · Ficha El Mirador",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "M-Cuenta.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "Mobile · Mi suscripción",
+      "w": 390,
+      "x": 1880,
+      "y": 6700
+    },
+    "M-Ficha.dc.html": {
+      "expand": "fill",
+      "h": 6900,
+      "is_interactive": true,
+      "title": "Mobile · Ficha",
+      "w": 390,
+      "x": 940,
+      "y": 6700
+    },
+    "M-Suscripcion.dc.html": {
+      "expand": "fill",
+      "h": 2300,
+      "is_interactive": true,
+      "title": "Mobile · Suscripción",
+      "w": 390,
+      "x": 1410,
+      "y": 6700
+    },
+    "M-Tienda.dc.html": {
+      "expand": "fill",
+      "h": 6900,
+      "is_interactive": true,
+      "title": "Mobile · Tienda",
+      "w": 390,
+      "x": 470,
+      "y": 6700
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 6300,
+      "is_interactive": true,
+      "title": "Desktop · Home",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Mobile.dc.html": {
+      "expand": "fill",
+      "h": 11800,
+      "is_interactive": true,
+      "title": "Mobile · Home",
+      "w": 390,
+      "x": 0,
+      "y": 6700
+    },
+    "Suscripcion.dc.html": {
+      "expand": "fill",
+      "h": 1100,
+      "is_interactive": true,
+      "title": "Desktop · Suscripción",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Tienda.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "Desktop · Tienda",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-08T01:40:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "t-desk": {
+      "kind": "title1",
+      "maxW": 7520,
+      "text": "Desktop · 1440",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    },
+    "t-mob": {
+      "kind": "title1",
+      "maxW": 2270,
+      "text": "Mobile · 390",
+      "w": 240,
+      "x": 0,
+      "y": 6380
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Tienda.dc.html",
+    "Ficha.dc.html",
+    "Suscripcion.dc.html",
+    "Cuenta.dc.html",
+    "Mobile.dc.html",
+    "M-Tienda.dc.html",
+    "M-Ficha.dc.html",
+    "M-Suscripcion.dc.html",
+    "M-Cuenta.dc.html"
+  ],
+  "pages": [],
+  "title": "Raíz Tostadores · web"
+}
